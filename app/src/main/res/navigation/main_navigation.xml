@@ -26,12 +26,26 @@
     <fragment
         android:id="@+id/a_fragment"
         android:name="com.nicktz9.navigationsample.ui.AFragment"
-        tools:layout="@layout/fragment_a" />
+        tools:layout="@layout/fragment_a">
+        <action
+            android:id="@+id/action_a_fragment_to_b_fragment"
+            app:destination="@id/b_fragment">
+            <argument
+                android:name="displayName"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+    </fragment>
 
     <fragment
         android:id="@+id/b_fragment"
         android:name="com.nicktz9.navigationsample.ui.BFragment"
-        tools:layout="@layout/fragment_b" />
+        tools:layout="@layout/fragment_b">
+        <argument
+            android:name="displayName"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
 
     <fragment
         android:id="@+id/c_fragment"

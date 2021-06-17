@@ -1,12 +1,8 @@
 package com.nicktz9.navigationsample
 
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.Navigator
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -17,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private var isAuth = false
+    private var isAuth = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +26,11 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         Thread.sleep(1000)
-        setupHomeScreen(navController)
+        if (isAuth) {
+            setupHomeScreen(navController)
+        } else {
+            navController.navigate(R.id.action_splash_fragment_to_sign_in)
+        }
     }
 
     private fun setupHomeScreen(navController: NavController) {
