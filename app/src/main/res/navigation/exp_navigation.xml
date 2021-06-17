@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/d_fragment"
+    android:id="@+id/exp_navigation">
+
+    <fragment
+        android:id="@+id/d_fragment"
+        android:name="com.nicktz9.navigationsample.ui.DFragment"
+        tools:layout="@layout/fragment_d" >
+        <action
+            android:id="@+id/action_d_fragment_to_e_fragment"
+            app:destination="@id/e_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/e_fragment"
+        android:name="com.nicktz9.navigationsample.ui.EFragment"
+        tools:layout="@layout/fragment_e" >
+
+        <deepLink
+            app:uri="nav://e"
+            />
+
+    </fragment>
+</navigation>
