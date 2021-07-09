@@ -30,7 +30,7 @@ class CFragment : Fragment() {
         val root: View = binding.root
         binding.screenName.text = "C"
         binding.action.setOnClickListener {
-            findNavController().navigate(R.id.action_c_fragment_to_exp_navigation)
+           // findNavController().navigate(R.id.action_c_fragment_to_exp_navigation)
         }
         binding.deeplink.setOnClickListener {
             //findNavController().resetAndBuildStack(R.id.action_to_exp_navigation, R.id.action_d_fragment_to_e_fragment)

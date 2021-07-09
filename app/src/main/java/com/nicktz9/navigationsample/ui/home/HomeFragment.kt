@@ -9,8 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.nicktz9.navigationsample.MainActivity
 import com.nicktz9.navigationsample.R
 import com.nicktz9.navigationsample.databinding.FragmentHomeBinding
+import com.nicktz9.navigationsample.ui.dashboard.DashboardFragment
 
 class HomeFragment : Fragment() {
 
@@ -37,7 +39,7 @@ class HomeFragment : Fragment() {
             textView.text = it
         })
         binding.textHome.setOnClickListener {
-            findNavController().navigate(R.id.action_global_a_fragment)
+            //findNavController().navigate(R.id.action_global_a_fragment)
         }
         return root
     }

@@ -10,7 +10,7 @@ object NavigationUtil {
         var startDestination: NavDestination? = graph
         while (startDestination is NavGraph) {
             val parent = startDestination
-            startDestination = parent.findNode(parent.startDestination)
+            startDestination = parent.findNode(parent.startDestinationId)
         }
         return startDestination
     }

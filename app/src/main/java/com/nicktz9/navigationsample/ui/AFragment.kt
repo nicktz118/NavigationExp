@@ -23,7 +23,7 @@ class AFragment : Fragment() {
         val root: View = binding.root
         binding.screenName.text = "A"
         binding.action.setOnClickListener {
-            findNavController().navigate(AFragmentDirections.actionAFragmentToBFragment(binding.displayName.text.toString()))
+            //findNavController().navigate(AFragmentDirections.actionAFragmentToBFragment(binding.displayName.text.toString()))
         }
         getBackStackData<String>(BUNDLE_KEY_DISPLAY_NAME, result =  { data ->
             Log.d(AFragment::class.java.simpleName, data)

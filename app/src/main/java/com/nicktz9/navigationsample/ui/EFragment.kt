@@ -1,7 +1,7 @@
 package com.nicktz9.navigationsample.ui
 
+import android.app.Fragment
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +17,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [EFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class EFragment : Fragment() {
+class EFragment : androidx.fragment.app.Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null

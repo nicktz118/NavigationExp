@@ -40,7 +40,7 @@ class SplashFragment : Fragment() {
         val binding = FragmentSplashBinding.inflate(inflater, container, false)
         val root: View = binding.root
         binding.action.setOnClickListener {
-            findNavController().navigate(R.id.action_global_c_fragment)
+            //findNavController().navigate(R.id.action_global_c_fragment)
         }
         return root
     }
